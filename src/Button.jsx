@@ -1,7 +1,7 @@
 import React from "react";
 
 const Button = ({ label, type, size, handleClick }) => {
-  const baseStyle = "flex items-center justify-center  rounded-full   text-xl ";
+  const baseStyle = "flex items-center justify-center  rounded-full text-xl ";
 
   const operatorStyle = "bg-gray-600 text-2xl text-white";
   const numberStyle = "bg-gray-300 text-black font-semibold";
