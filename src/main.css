@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.buttons-circle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: rgb(17 24 39);
+    height: 64px;
+    width: 64px;
+    border-radius: 100%;
+    color:white;
+    cursor:pointer;
+}
+.buttons-rect{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: rgb(17 24 39);
+    height: 100%;
+    width: 100% ;
+    border-radius: 10px;
+    color:white;
+    cursor:pointer;
+    transition: .5s ease-in;
+}
+.buttons-circle:hover,.buttons-rect:hover {
+   box-shadow: 0 0px 7px 2px rgba(0, 0, 0, 0.2);
+   transform: scale(1.1);
+}
