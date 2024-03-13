@@ -26,8 +26,11 @@ const Calculator = () => {
         console.log(display);
         setOperator(label);
         setDisplay(0);
-        if (operator != "=") {
-          setPreValue(prevValue + parseInt(display));
+        if (operator != null && operator != "=") {
+          const result = calculate(prevValue, parseInt(display), operator);
+          setPreValue(result);
+          setOperator(label);
+          setDisplay(0);
         }
       }
     } else if (type === "function") {
@@ -47,6 +50,16 @@ const Calculator = () => {
         break;
       case "%":
         setDisplay(parseInt(display) / 100);
+        setPreValue(display);
+        setDisplay(0);
+
+        const result = calculate(
+          prevValue,
+          parseInt(display),
+          (operator = "x")
+        );
+
+        setDisplay(result);
         break;
       default:
         break;
